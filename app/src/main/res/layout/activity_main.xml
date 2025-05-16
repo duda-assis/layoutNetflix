@@ -8,10 +8,143 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="121dp"
-        android:layout_height="92dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="34dp" />
+        android:id="@+id/logo"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/series"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/esquerda"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/series"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Séries"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toStartOf="@+id/filme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/filme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filmes"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/series"
+        app:layout_constraintEnd_toStartOf="@+id/minha_lista"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/series"
+        app:layout_constraintTop_toTopOf="@+id/series" />
+
+    <TextView
+        android:id="@+id/minha_lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minha Lista"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/filme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/direita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filme"
+        app:layout_constraintTop_toTopOf="@+id/filme" />
+
+    <ImageView
+        android:id="@+id/logo_filme"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/linha_baixo"
+        app:layout_constraintEnd_toEndOf="@+id/direita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/esquerda"
+        app:layout_constraintTop_toTopOf="@+id/linha_top"
+        app:srcCompat="@drawable/logokinnporsche" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linha_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linha_baixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25024927" />
+
+    <TextView
+        android:id="@+id/mafia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Máfia"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/suspense"
+        app:layout_constraintEnd_toStartOf="@+id/suspense"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/esquerda"
+        app:layout_constraintTop_toTopOf="@+id/suspense" />
+
+    <TextView
+        android:id="@+id/suspense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Suspense"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/drama"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mafia"
+        app:layout_constraintTop_toTopOf="@+id/linha_baixo" />
+
+    <TextView
+        android:id="@+id/drama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drama"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/suspense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/direita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/suspense"
+        app:layout_constraintTop_toTopOf="@+id/suspense" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/esquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/direita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <Button
+        android:id="@+id/assistir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assistir"
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="385dp"
+
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

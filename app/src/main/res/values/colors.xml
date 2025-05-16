@@ -7,4 +7,5 @@
     <color name="primaria_variante">#642525</color>
     <color name="secundaria">#BF6F6F</color>
     <color name="fundo">#000000</color>
+    <color name="menu_navegacao">@color/white</color>
 </resources>
