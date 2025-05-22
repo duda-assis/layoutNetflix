@@ -8,6 +8,16 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/capadefundo"
+        android:layout_width="match_parent"
+        android:layout_height="317dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/kinnporsche" />
+
+    <ImageView
         android:id="@+id/logo"
         android:layout_width="40dp"
         android:layout_height="60dp"
@@ -22,7 +32,7 @@
         android:id="@+id/series"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Séries"
+        android:text="@string/s_ries"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/logo"
@@ -35,7 +45,7 @@
         android:id="@+id/filme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Filmes"
+        android:text="@string/filmes"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/series"
@@ -48,7 +58,7 @@
         android:id="@+id/minha_lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minha Lista"
+        android:text="@string/minha_lista"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/filme"
@@ -60,8 +70,8 @@
 
     <ImageView
         android:id="@+id/logo_filme"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/linha_baixo"
         app:layout_constraintEnd_toEndOf="@+id/direita"
         app:layout_constraintHorizontal_bias="0.5"
@@ -87,7 +97,7 @@
         android:id="@+id/mafia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Máfia"
+        android:text="@string/m_fia"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/suspense"
@@ -101,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Suspense"
+        android:text="@string/suspense"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/drama"
@@ -113,7 +123,7 @@
         android:id="@+id/drama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Drama"
+        android:text="@string/drama"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/suspense"
@@ -141,10 +151,101 @@
         android:id="@+id/assistir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/baseline_arrow_right_24"
+        android:backgroundTint="@color/primaria"
+        android:textColor="@color/menu_navegacao"
         android:text="Assistir"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="385dp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_detalhes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bt_minhalista"
+        app:layout_constraintTop_toBottomOf="@+id/suspense" />
 
-        />
+    <Button
+        android:id="@+id/bt_minhalista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/baseline_add_24"
+        android:padding="0dp"
+        android:text="@string/minha_lista_bt"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="@+id/assistir"
+        app:layout_constraintEnd_toStartOf="@+id/assistir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/esquerda"
+        app:layout_constraintTop_toTopOf="@+id/assistir" />
+
+    <Button
+        android:id="@+id/bt_detalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/baseline_info_24"
+        android:padding="0dp"
+        android:text="@string/detalhes"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="@+id/assistir"
+        app:layout_constraintEnd_toEndOf="@id/direita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/assistir"
+        app:layout_constraintTop_toTopOf="@+id/assistir" />
+
+    <TextView
+        android:id="@+id/lancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/lan_amento"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/assistir" />
+
+    <ImageView
+        android:id="@+id/f1_katseye"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/f2_notme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/lancamento"
+        app:srcCompat="@drawable/katseye" />
+
+    <ImageView
+        android:id="@+id/f2_notme"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/f1_katseye"
+        app:layout_constraintEnd_toStartOf="@+id/f3_rastros"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f1_katseye"
+        app:layout_constraintTop_toTopOf="@+id/f1_katseye"
+        app:srcCompat="@drawable/notme" />
+
+    <ImageView
+        android:id="@+id/f3_rastros"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/f2_notme"
+        app:layout_constraintEnd_toEndOf="@id/direita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f2_notme"
+        app:layout_constraintTop_toTopOf="@+id/f2_notme"
+        app:srcCompat="@drawable/rastros" />
+
+    <TextView
+        android:id="@+id/meunome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:hint="EDUARDA ASSIS - IOT6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/direita"
+        app:layout_constraintStart_toStartOf="@+id/esquerda" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

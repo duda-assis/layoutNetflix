@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LayoutNetflix</string>
+    <string name="s_ries">ชุด</string>
+    <string name="filmes">ภาพยนตร์</string>
+    <string name="minha_lista">รายการของฉัน</string>
+    <string name="m_fia">มาเฟีย</string>
+    <string name="suspense">ความระทึกใจ</string>
+    <string name="drama">ละคร</string>
+    <string name="minha_lista_bt">รายการของฉัน</string>
+    <string name="detalhes">รายละเอียด</string>
+    <string name="lan_amento">ปล่อย</string>
+</resources>
